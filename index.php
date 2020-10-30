@@ -1,4 +1,4 @@
 <?php
-echo "<h2>PHP is Fun!";
-echo "Hello word!<br>";
+echo "<h2>IT@KMITL</h2>";
+echo "Hello IT<br>";
 ?>
