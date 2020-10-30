@@ -5,7 +5,7 @@
     <body>
         <h1>ชื่อ-นามสกุล : นายทัชชน เจริญภูวดล</h1>
         <p>ชื่อเล่น : เบส</p>
-        <img src="newmushroom.jng">
+        <img src="mushroom.jpg">
         <img src="newmario.jpg">
         <br>
         <a href="https://onlearn.it.kmitl.ac.th/">This is a Link</a>
