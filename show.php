@@ -1,6 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>ITF Lab</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
 <?php
@@ -12,12 +17,14 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<table border="1">
-  <tr>
-    <th width="100"> <div align="center">Name</div></th>
-    <th width="350"> <div align="center">Comment </div></th>
-    <th width="150"> <div align="center">www </div></th>
-  </tr>
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th width="100"> <div align="center">Name</div></th>
+      <th width="350"> <div align="center">Comment </div></th>
+      <th width="150"> <div align="center">Link </div></th>
+    </tr>
+  </thead>
 <?php
 while($Result = mysqli_fetch_array($res))
 {
