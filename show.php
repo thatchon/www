@@ -48,18 +48,18 @@
                 <td><?php echo $Result['Link']; ?></td>
                 <td><a href="delete.php?id=<?php echo $Result['ID']; ?>" onclick="return confirm('ยืนยันการลบข้อมูล');" class="btn btn-danger">ลบ</a></td>
               </tr>
+            <?php
+            }
+            ?>
           </tbody>
         </table>
       </div>
     </div>
   </div>
-<?php
-            }
-?>
-<?php
-mysqli_close($conn);
-?>
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <?php
+  mysqli_close($conn);
+  ?>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </body>
 
 </html>
