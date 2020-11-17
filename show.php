@@ -23,6 +23,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
       <table class="table table-striped table-bordered">
         <thead>
           <tr>
+          <th width="100"> <div align="center">ID </div></th>
             <th width="100"> <div align="center">Name</div></th>
             <th width="350"> <div align="center">Comment </div></th>
             <th width="150"> <div align="center">Action </div></th>
@@ -33,15 +34,20 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
         <tbody>
         
 <?php
-foreach ($Result as $row) { ?>
+while($Result = mysqli_fetch_array($res))
+{
+?>
   <tr>
-    <td><?php echo $row['Name'];?></div></td>
-    <td><?php echo $row['Comment'];?></td>
-    <td><?php echo $row['Link'];?></td>
+    <td><?php echo $Result['ID'];?></div></td>
+    <td><?php echo $Result['Name'];?></div></td>
+    <td><?php echo $Result['Comment'];?></td>
+    <td><?php echo $Result['Link'];?></td>
     <td>
       <a href="delete.php?id=<?php echo $row['ID'];?>" >ลบ</a>
   </tr>
-<?php } ?>
+<?php
+}
+?>
 <?php
 mysqli_close($conn);
 ?>
