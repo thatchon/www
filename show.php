@@ -33,19 +33,15 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
         <tbody>
         
 <?php
-while($Result = mysqli_fetch_array($res))
-{
-?>
+foreach ($Result as $row) { ?>
   <tr>
-    <td><?php echo $Result['Name'];?></div></td>
-    <td><?php echo $Result['Comment'];?></td>
-    <td><?php echo $Result['Link'];?></td>
+    <td><?php echo $row['Name'];?></div></td>
+    <td><?php echo $row['Comment'];?></td>
+    <td><?php echo $row['Link'];?></td>
     <td>
       <a href="delete.php?id=<?php echo $row['ID'];?>" >ลบ</a>
   </tr>
-<?php
-}
-?>
+<?php } ?>
 <?php
 mysqli_close($conn);
 ?>
