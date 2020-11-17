@@ -43,7 +43,7 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
     <td>
-      <a href="delete.php?id=<?php echo $row['ID'];?>" >ลบ</a>
+      <a href="delete.php?id=<?php echo $Result['ID'];?>" >ลบ</a>
   </tr>
 <?php
 }
