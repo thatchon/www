@@ -17,16 +17,21 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<table class="table table-striped">
-  <table width="600" border="1">
-    <thead class="thead-dark">
-      <tr>
-        <th width="100"> <div align="center">Name</div></th>
-        <th width="350"> <div align="center">Comment </div></th>
-        <th width="150"> <div align="center">Action </div></th>
-      </tr>
-    </thead>
-  </table>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th width="100"> <div align="center">Name</div></th>
+            <th width="350"> <div align="center">Comment </div></th>
+            <th width="150"> <div align="center">Action </div></th>
+            <th width="150"> <div align="center">ลบ </div></th>
+            <th width="150"> <div align="center">แก้ไข </div></th>
+          </tr>
+        </thead>
+        <tbody>
+        
 <?php
 while($Result = mysqli_fetch_array($res))
 {
@@ -35,11 +40,12 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
+    <td>
+      <a href="delete.php?id=<?php echo $row['id'];?>" onclick="return confirm('ยืนยันการลบข้อมูล');" class="btn btn-danger">ลบ</a>
   </tr>
 <?php
 }
 ?>
-</table>
 <?php
 mysqli_close($conn);
 ?>
