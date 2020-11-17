@@ -21,11 +21,11 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <table class="table table-striped table-bordered">
+        <table class="table table-striped table-bordered table-hover">
           <caption>
             <a href="form.html" class="btn btn-primary"> เพิ่ม </a>
           </caption>
-          <thead>
+          <thead class="table-primary">
             <tr>
               <th width="100">
                 <div align="center">Name</div>
