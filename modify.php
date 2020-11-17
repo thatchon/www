@@ -27,7 +27,7 @@ $row = mysqli_fetch_array($Result);
 mysqli_close($conn);
 ?>
 
-<h1>ฟอร์มแก้ไข/ปรับปรุงข้อมูลลล</h1>
+<h1>ฟอร์มแก้ไข/8;p</h1>
 <form action = "insert.php" method = "post" id="CommentForm" >
     Name:<br>
     <input type="text" name = "name" id="idName" placeholder="Enter Name" required value="<?php echo $row['Name'];?>"> <br>
