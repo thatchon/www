@@ -22,6 +22,9 @@
     <div class="row">
       <div class="col-md-12">
         <table class="table table-striped table-bordered">
+          <caption>
+          <a href="form.html" class="btn btn-primary"> เพิ่ม </a>
+          </caption>
           <thead>
             <tr>
               <th width="100">
@@ -46,7 +49,9 @@
                 <td><?php echo $Result['Name']; ?></td>
                 <td><?php echo $Result['Comment']; ?></td>
                 <td><?php echo $Result['Link']; ?></td>
-                <td><a href="delete.php?id=<?php echo $Result['ID']; ?>" onclick="return confirm('ยืนยันการลบข้อมูล');" class="btn btn-danger">ลบ</a></td>
+                <td><a href="delete.php?id=<?php echo $Result['ID']; ?>" onclick="return confirm('ยืนยันการลบข้อมูล');" class="btn btn-danger">ลบ</a>
+                    <a href
+              </td>
               </tr>
             <?php
             }
