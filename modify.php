@@ -22,12 +22,12 @@ if (mysqli_connect_errno($conn))
 $id = $_GET['ID'];
         
 $query = "SELECT * FROM guestbook WHERE id = '$id' ";
-$row = mysqli_fetch_array($Result);
+$row = mysqli_fetch_array($res);
 
 mysqli_close($conn);
 ?>
 
-<h1>ฟอร์มแก้ไข/8;p</h1>
+<h1>ฟอร์มแก้ไข/ปรับปรุงข้อมูล</h1>
 <form action = "insert.php" method = "post" id="CommentForm" >
     Name:<br>
     <input type="text" name = "name" id="idName" placeholder="Enter Name" required value="<?php echo $row['Name'];?>"> <br>
