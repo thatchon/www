@@ -29,15 +29,12 @@ mysqli_close($conn);
 
 <h1>ฟอร์มแก้ไข/ปรับปรุงข้อมูล</h1>
 <form action = "insert.php" method = "post" id="CommentForm" >
-    <br>
-    Name:
-    <input type="text" name = "name" id="idName" placeholder="Enter Name" required value="<?php echo $Result['Name']; ?>">
-    <br>
-    Comment:
-    <textarea rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment" required value="<?php echo $Result['Comment']; ?>"></textarea>
-    <br>
-    Link:
-    <input type="text" name = "link" id="idLink" placeholder="Enter Link" required value="<?php echo $Result['Link']; ?>">
+    Name:<br>
+    <input type="text" name = "name" id="idName" placeholder="Enter Name" required value="<?php echo $Result['Name'];?>"> <br>
+    Comment:<br>
+    <textarea rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment" required value="<?php echo $Result['Comment'];?>"></textarea><br>  
+    Link:<br>
+    <input type="text" name = "link" id="idLink" placeholder="Enter Link" required value="<?php echo $Result['Link'];?>"> <br><br>
     <input type="submit" id="commentBtn">
   </form> 
 </body>
