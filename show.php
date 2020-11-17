@@ -23,26 +23,24 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
       <table class="table table-striped table-bordered">
         <thead>
           <tr>
-          <th width="100"> <div align="center">ID </div></th>
             <th width="100"> <div align="center">Name</div></th>
             <th width="350"> <div align="center">Comment </div></th>
             <th width="150"> <div align="center">Action </div></th>
-            <th width="150"> <div align="center">ลบ </div></th>
-            <th width="150"> <div align="center">แก้ไข </div></th>
           </tr>
         </thead>
-        <tbody>
-        
+      </table>
+    </div>
+  </div>
+</div>
 <?php
 while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-    <td><?php echo $Result['ID'];?></td>
     <td><?php echo $Result['Name'];?></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
-    <td><a href="delete.php?id=<?php echo $Result['ID'];?>" >ลบ</a>
+    <td><a href="delete.php?id=<?php echo $Result['ID'];?>" onclick="return confirm('ยืนยันการลบข้อมูล');" class="btn btn-danger">ลบ</a>
   </tr>
 <?php
 }
