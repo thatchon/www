@@ -25,19 +25,25 @@
     $res = mysqli_query($conn, "SELECT * FROM guestbook WHERE ID='$id'");
     $row = mysqli_fetch_array($res)
     ?>
-    <div class="container">
-    <h2>Edit Form</h2>
-    <form action = "update.php?ID=<?php echo $row['ID']; ?>" method = "post" id="CommentForm">
-        <i class="fas fa-user input-prefix"></i>
-        <label for="Username">Username :</label>
-          <input type="text" class="form-control" name = "Name" id="idName" value="<?php echo "$row[Name]"; ?>" <br>
-        <i class="fas fa-user input-prefix"></i>
-        <label for="Username">Comment :</label>
-          <input type="text" class="form-control" name = "Comment" id="idComment" value="<?php echo "$row[Comment]"; ?>" <br>
-        <i class="fas fa-user input-prefix"></i>
-        <label for="Username">Link :</label>
-          <input type="text" class="form-control" name = "Link" id="idLink" value="<?php echo "$row[Link]"; ?>"> <br><br>
-          <input type="submit" id="commentBtn"class="btn btn-outline-warning">
+  <div class="container">
+    <h2>ฟอร์มแก้ไขข้อมูล</h2>
+    <form action = "insert.php" method = "post" id="CommentForm" >
+    <div class="form-group">
+      <i class="fas fa-user input-prefix-o"></i>
+      <label for="InputIconEx2">Username</label>
+      <input type="Username" class="form-control" id="InputIconEx2" placeholder="Enter Username" name="name">
     </div>
-      </form>
+
+    <div class="form-group">
+      <i class="fas fa-envelope prefix"></i>
+      <label for="Comment">Comment :</label>
+      <input type="comment" class="form-control" name = "comment" id="idComment" placeholder="Enter Comment"></textarea>
+    </div>
+    
+      <i class="fas fa-link"></i>
+      <label for="Link">Link :</label>
+      <input type="text" class="form-control" name = "link" id="idLink" placeholder="Enter Link"> <br><br>
+      <input type="submit" class="btn btn-primary" id="commentBtn">
+  </form> 
 </body>
+</html>
