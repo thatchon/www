@@ -25,7 +25,7 @@
   ?>
 
   <div class="container">
-    <h1>ฟอร์มแก้ไขข้อมูล</1>
+    <h1>ฟอร์มแก้ไขข้อมูล</h1>
     <form action="update.php?ID=<?php echo $row['ID']; ?>" method="post" id="CommentForm">
       <label for="Username">Username :</label>
       <input type="text" class="form-control" name="Name" id="idName" value="<?php echo "$row[Name]"; ?>" <br>
