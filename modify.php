@@ -7,6 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Modify</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -21,22 +24,20 @@
   $id = $_GET['ID'];
 
   $query = "SELECT * FROM guestbook WHERE id = '$id' ";
-  $Result = mysqli_fetch_array($res);
-
-  mysqli_close($conn);
+  $res = mysqli_query($conn, "SELECT * FROM guestbook WHERE ID='$id'");
+  $row = mysqli_fetch_array($res)
   ?>
 
   <div class="container">
     <h1>ฟอร์มแก้ไข/ปรับปรุงข้อมูล</h1>
-    <form action="update.php?id=<?php echo $Result['ID']; ?>" method="post" id="CommentForm">
-      Name:<br>
-      <input type="text" name="name" id="idName" placeholder="Enter Name" value="<?php echo $Result['Name']; ?>"> <br>
-      Comment:<br>
-      <textarea rows="10" cols="20" name="comment" id="idComment" placeholder="Enter Comment" value="<?php echo $Result['Comment']; ?>"></textarea><br>
-      Link:<br>
-      <input type="text" name="link" id="idLink" placeholder="Enter Link" value="<?php echo $Result['Link']; ?>"> <br><br>
-      <input type="submit" id="commentBtn">
-    </form>
+    <form action = "update.php?ID=<?php echo $row['ID']; ?>" method = "post" id="CommentForm">
+        <label for="Username">Username :</label>
+          <input type="text" class="form-control" name = "Name" id="idName" value="<?php echo "$row[Name]"; ?>" <br>
+          <label for="Username">Comment :</label>
+          <input type="text" class="form-control" name = "Comment" id="idComment" value="<?php echo "$row[Comment]"; ?>" <br>
+        <label for="Username">Link :</label>
+          <input type="text" class="form-control" name = "Link" id="idLink" value="<?php echo "$row[Link]"; ?>"> <br><br>
+          <input type="submit" id="commentBtn"class="btn btn-outline-warning">
   </div>
 </body>
 
