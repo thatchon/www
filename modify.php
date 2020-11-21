@@ -39,6 +39,7 @@
           <input type="text" class="form-control" name = "Link" id="idLink" value="<?php echo "$row[Link]"; ?>"> <br><br>
           <input type="submit" id="commentBtn"class="btn btn-outline-warning">
   </div>
+</form>
 </body>
 
 </html>
