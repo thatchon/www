@@ -28,7 +28,7 @@
 
   <div class="container">
     <h1>ฟอร์มแก้ไข/ปรับปรุงข้อมูล</h1>
-    <form action="update.php" method="post" id="CommentForm">
+    <form action="update.php?ID=<?php echo $Result['ID']; ?>" method="post" id="CommentForm">
       Name:<br>
       <input type="text" name="name" id="idName" placeholder="Enter Name" value="<?php echo $Result['Name']; ?>"> <br>
       Comment:<br>
