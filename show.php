@@ -25,7 +25,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <table class="table table-striped table-bordered table-hover">
+        <table class="table table-striped table-bordered table-hover table-dark">
           <thead class="table-primary">
             <tr>
               <th width="100">
