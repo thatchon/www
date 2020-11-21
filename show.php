@@ -52,15 +52,14 @@
                         <td><?php echo $Result['Comment']; ?></td>
                         <td><?php echo $Result['Link']; ?></td>
                         <td>
-                            <a href="edit.php?ID=<?php echo $Result['ID'] ?>" class="btn btn-outline-success">แก้ไข</a>
-                            <a href="del.php?ID=<?php echo $Result['ID'] ?>" class="btn btn-outline-danger" onclick="return confirm('ยืนยันการลบข้อมูล?')">ลบ</a>
+                            <a href="delete.php?id=<?php echo $Result['ID']; ?>" onclick="return confirm('ยืนยันการลบข้อมูล');" class="btn btn-danger">ลบ</a>
+                            <a href="edit.php?id=<?php echo $Result['ID']; ?>" class="btn btn-warning">แก้ไข</a>
                     </tr>
                 </tbody>
             <?php
             }
             ?>
         </table>
-        <button type="button" class="btn btn-outline-warning" onclick="window.location.href='form.html'">ADD</button>
         <?php
         mysqli_close($conn);
         ?>
