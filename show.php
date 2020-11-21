@@ -53,7 +53,7 @@
                         <td><?php echo $Result['Link']; ?></td>
                         <td>
                             <a href="edit.php?ID=<?php echo $Result['ID'] ?>" class="btn btn-outline-success">แก้ไข</a>
-                            <a href="del.php?ID=<?php echo $Result['ID'] ?>" class="btn btn-outline-danger" onclick="return confirm('ยืนยันการลบข้อมูล?')">ลบ</a>
+                            <a href="delete.php?ID=<?php echo $Result['ID'] ?>" class="btn btn-outline-danger" onclick="return confirm('ยืนยันการลบข้อมูล?')">ลบ</a>
                     </tr>
                 </tbody>
             <?php
