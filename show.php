@@ -26,9 +26,6 @@
     <div class="row">
       <div class="col-md-12">
         <table class="table table-striped table-bordered table-hover">
-          <caption>
-            <a href="form.html" class="btn btn-primary"> เพิ่ม </a>
-          </caption>
           <thead class="table-primary">
             <tr>
               <th width="100">
@@ -53,8 +50,9 @@
                 <td><?php echo $Result['Name']; ?></td>
                 <td><?php echo $Result['Comment']; ?></td>
                 <td><?php echo $Result['Link']; ?></td>
-                <td><a href="edit.php?ID=<?php echo $Result['ID'] ?>" class="btn btn-outline-success">แก้ไข</a>
-                    <a href="delete.php?ID=<?php echo $Result['ID'] ?>" class="btn btn-outline-danger" onclick="return confirm('ยืนยันการลบข้อมูล?')">ลบ</a>
+                <td><a href="edit.php?ID=<?php echo $Result['ID'] ?>" class="btn btn-warning" onclick="return confirm('ยืนยันการแก้ไขข้อมูล?')">แก้ไข</a>
+                    <a href="delete.php?ID=<?php echo $Result['ID'] ?>" class="btn btn-danger" onclick="return confirm('ยืนยันการลบข้อมูล?')">ลบ</a>
+                    </tr>
                 </td>
               </tr>
             <?php
@@ -62,7 +60,7 @@
             ?>
           </tbody>
         </table>
-        <button type="button" class="btn btn-outline-warning" onclick="window.location.href='form.html'">เพิ่มข้อมูล</button>
+        <button type="button" class="btn btn-primary" onclick="window.location.href='form.html'">เพิ่มข้อมูล</button>
       </div>
     </div>
   </div>
