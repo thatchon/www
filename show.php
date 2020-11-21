@@ -50,7 +50,7 @@
                 <td><?php echo $Result['Name']; ?></td>
                 <td><?php echo $Result['Comment']; ?></td>
                 <td><?php echo $Result['Link']; ?></td>
-                <td><a href="edit.php?ID=<?php echo $Result['ID'] ?>" class="btn btn-warning" onclick="return confirm('ยืนยันการแก้ไขข้อมูล?')">แก้ไข</a>
+                <td><a href="modify.php?ID=<?php echo $Result['ID'] ?>" class="btn btn-warning" onclick="return confirm('ยืนยันการแก้ไขข้อมูล?')">แก้ไข</a>
                     <a href="delete.php?ID=<?php echo $Result['ID'] ?>" class="btn btn-danger" onclick="return confirm('ยืนยันการลบข้อมูล?')">ลบ</a>
                     </tr>
                 </td>
