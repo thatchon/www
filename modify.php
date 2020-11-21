@@ -25,7 +25,7 @@
   ?>
 
   <div class="container">
-    <h2>Edit Form</h2>
+    <h1>ฟอร์มแก้ไขข้อมูล</1>
     <form action="update.php?ID=<?php echo $row['ID']; ?>" method="post" id="CommentForm">
       <label for="Username">Username :</label>
       <input type="text" class="form-control" name="Name" id="idName" value="<?php echo "$row[Name]"; ?>" <br>
@@ -33,7 +33,7 @@
       <input type="text" class="form-control" name="Comment" id="idComment" value="<?php echo "$row[Comment]"; ?>" <br>
       <label for="Username">Link :</label>
       <input type="text" class="form-control" name="Link" id="idLink" value="<?php echo "$row[Link]"; ?>"> <br><br>
-      <input type="submit" id="commentBtn" class="btn btn-outline-warning">
+      <input type="submit" id="commentBtn" class="btn btn-success">
   </div>
   </form>
 
