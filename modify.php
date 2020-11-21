@@ -10,32 +10,34 @@
 </head>
 
 <body>
-<?php
+  <?php
 
-$conn = mysqli_init();
-mysqli_real_connect($conn, 'thatchon.mysql.database.azure.com', 'btkeiei1@thatchon', 'THEMARI01z', 'itflab', 3306);
-if (mysqli_connect_errno($conn))
-{
-    die('Failed to connect to MySQL: '.mysqli_connect_error());
-}
+  $conn = mysqli_init();
+  mysqli_real_connect($conn, 'thatchon.mysql.database.azure.com', 'btkeiei1@thatchon', 'THEMARI01z', 'itflab', 3306);
+  if (mysqli_connect_errno($conn)) {
+    die('Failed to connect to MySQL: ' . mysqli_connect_error());
+  }
 
-$id = $_GET['ID'];
-        
-$query = "SELECT * FROM guestbook WHERE id = '$id' ";
-$Result = mysqli_fetch_array($res);
+  $id = $_GET['ID'];
 
-mysqli_close($conn);
-?>
+  $query = "SELECT * FROM guestbook WHERE id = '$id' ";
+  $Result = mysqli_fetch_array($res);
 
-<h1>ฟอร์มแก้ไข/ปรับปรุงข้อมูล</h1>
-<form action = "insert.php" method = "post" id="CommentForm" >
-    Name:<br>
-    <input type="text" name = "name" id="idName" placeholder="Enter Name" required value="<?php echo $Result['Name'];?>"> <br>
-    Comment:<br>
-    <textarea rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment" required value="<?php echo $Result['Comment'];?>"></textarea><br>  
-    Link:<br>
-    <input type="text" name = "link" id="idLink" placeholder="Enter Link" required value="<?php echo $Result['Link'];?>"> <br><br>
-    <input type="submit" id="commentBtn">
-  </form> 
+  mysqli_close($conn);
+  ?>
+
+  <div class="container">
+    <h1>ฟอร์มแก้ไข/ปรับปรุงข้อมูล</h1>
+    <form action="update.php" method="post" id="CommentForm">
+      Name:<br>
+      <input type="text" name="name" id="idName" placeholder="Enter Name" value="<?php echo $Result['Name']; ?>"> <br>
+      Comment:<br>
+      <textarea rows="10" cols="20" name="comment" id="idComment" placeholder="Enter Comment" value="<?php echo $Result['Comment']; ?>"></textarea><br>
+      Link:<br>
+      <input type="text" name="link" id="idLink" placeholder="Enter Link" value="<?php echo $Result['Link']; ?>"> <br><br>
+      <input type="submit" id="commentBtn">
+    </form>
+  </div>
 </body>
+
 </html>
